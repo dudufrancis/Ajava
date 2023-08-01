@@ -1,0 +1,25 @@
+package aula31;
+
+import javax.swing.JOptionPane;
+
+public class AULA31 {
+
+    public static void main(String[] args) {
+        
+
+        int a, z;
+
+        a = Integer.parseInt(JOptionPane.showInputDialog("informe o valor do a: "));
+        z = Integer.parseInt(JOptionPane.showInputDialog("informe o valor de z: "));
+
+        if (a > z) {
+            JOptionPane.showMessageDialog(null, "A é maior que Z");
+        } else if (z > a) {
+            JOptionPane.showMessageDialog(null, "Z é maior que A");
+        } else {
+            JOptionPane.showMessageDialog(null, "Os dois números são iguais");
+        }
+    }
+}
+
+    
