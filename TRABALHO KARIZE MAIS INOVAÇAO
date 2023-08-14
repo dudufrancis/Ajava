@@ -1,0 +1,40 @@
+package aula0808;
+
+import javax.swing.JOptionPane;
+
+public class Aula0808 {
+
+    public static void main(String[] args) {
+        /*Temos uma corrida de carro na cidade. Os pilotos participantes tem que serem maior de idade e não pode ser idoso. 
+        Verificar se o piloto é de menor, maior ou idoso. 
+        (menor de idade), até 17 anos; (maior de idade), entre 18 e 64 anos; (Idoso), igual ou maior que 65 anos/*/
+        int idade = 0;
+        String nome;
+        char saude;
+
+        nome = (JOptionPane.showInputDialog("Informe o seu nome: "));
+        idade = Integer.parseInt(JOptionPane.showInputDialog("Informe sua idade: "));
+        saude = JOptionPane.showInputDialog("Você possui allgum problema de saúde: ").charAt(0);
+
+        String mensagemIdade = "";
+        if (idade <= 17) {
+            JOptionPane.showMessageDialog(null, "Idade inapropriada");
+        } else if (idade >= 18 && idade <= 64) {
+            JOptionPane.showMessageDialog(null, "Piloto inscrito na corrida ");
+        } else {
+            JOptionPane.showMessageDialog(null, "Idade Inválida");
+        }
+
+        String mensagemSaude = "";
+        if (saude == 'S' || saude == 's') {
+            JOptionPane.showMessageDialog(null, nome + " não pode participar devido a problemas de saúde.");
+        } else {
+            JOptionPane.showMessageDialog(null, nome + " está apto a participar da corrida.");
+        }
+        
+        JOptionPane.showMessageDialog(null,"NOME: " + nome + "\n" + "IDADE: " + idade + "\n" + "TEM ALGUM PROBLEMA DE SAÚDE"
+                + ":  " + saude);
+
+    }
+
+}
