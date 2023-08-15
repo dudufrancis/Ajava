@@ -1,0 +1,26 @@
+package revisao2;
+
+import javax.swing.JOptionPane;
+
+public class Revisao2 {
+
+    public static void main(String[] args) {
+
+        int ano;
+        String sair = "N";
+
+        do {
+            ano = Integer.parseInt(JOptionPane.showInputDialog("Informe um ano completo: "));
+
+            if (ano % 4 == 0) {
+                if (ano % 100 != 0) {
+                    JOptionPane.showMessageDialog(null, "Ano Bissexto");
+                }
+                sair = JOptionPane.showInputDialog("Deseja sair? S ou N: ");
+
+            }
+
+        } while (sair.equalsIgnoreCase("N"));
+
+    }
+}
