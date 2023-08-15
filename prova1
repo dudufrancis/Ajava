@@ -1,0 +1,56 @@
+package aula0808;
+
+import javax.swing.JOptionPane;
+
+public class prova1408 {
+
+    public static void main(String[] args) {
+
+        int cont = 0;
+        String resposta = "";
+        String respostaLocal;
+       String respostaTelefone;
+       String respostaMora;
+       String respostaDividas;
+       String respostaTrabalhou;
+
+        respostaTelefone = JOptionPane.showInputDialog("Telefonou para a vítima? ");
+        respostaLocal = JOptionPane.showInputDialog("Esteve no local do crime? ");
+        respostaMora = JOptionPane.showInputDialog("Mora perto da vítima? ");
+        respostaDividas = JOptionPane.showInputDialog("Estava com dívidas com a vítima? ");
+        respostaTrabalhou = JOptionPane.showInputDialog("Já trabalhou com a vítima? ");
+
+        if (respostaTelefone.equalsIgnoreCase("SIM")) {
+            cont++;
+            
+        }
+        if(respostaLocal.equalsIgnoreCase("SIM")){
+            cont++;
+        }
+        if(respostaMora.equalsIgnoreCase("SIM")){
+            cont++;
+        }
+        if(respostaDividas.equalsIgnoreCase("SIM")){
+            cont++;
+        }
+        if(respostaTrabalhou.equalsIgnoreCase("SIM")){
+            cont++;
+        }  
+        
+        if (cont == 2) {
+            JOptionPane.showMessageDialog(null, "Suspeito");
+        }
+       else if (cont == 3 || cont == 4) {
+            JOptionPane.showMessageDialog(null, "Cúmplice");
+        }
+       else if (cont == 5){
+            JOptionPane.showMessageDialog(null, "Assassino");
+        }
+       else {
+           JOptionPane.showMessageDialog(null, "Inocente");
+       }
+
+    }
+
+}
+
