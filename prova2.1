@@ -1,0 +1,27 @@
+package revisao3;
+
+import javax.swing.JOptionPane;
+
+public class Revisao3 {
+
+    public static void main(String[] args) {
+        
+        String sair = "N";
+        float salario, valorHora;
+        int horas;
+        
+        do{
+           
+            salario = Float.parseFloat(JOptionPane.showInputDialog("Informar seu salário: R$"));
+            horas = Integer.parseInt(JOptionPane.showInputDialog("Informe as horas trabalhadas: "));
+            
+            valorHora = salario/horas;
+            
+            JOptionPane.showMessageDialog(null, "O valor da hora trabalhada é : R$" + valorHora);
+            
+            sair = JOptionPane.showInputDialog("Deseja sair? S ou N");
+        }while(sair.equalsIgnoreCase("N"));
+
+    }
+    
+}
