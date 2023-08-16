@@ -1,0 +1,35 @@
+package prova3;
+
+import javax.swing.JOptionPane;
+
+public class Prova3 {
+
+    public static void main(String[] args) {
+
+        int num, candidato_1 = 0, candidato_2 = 0, candidato_3 = 0, canditado_4 = 0, voto_nulo = 0, voto_branco = 0;
+        
+        do{
+        num = Integer.parseInt(JOptionPane.showInputDialog("Informe o numero do candidato: "));
+        
+        switch (num) {
+            case 1 ->
+                candidato_1 += 1;
+            case 2 ->
+                candidato_2 += 1;
+            case 3 ->
+                candidato_3 += 1;
+            case 4 ->
+                candidato_4 += 1;
+            case 5 ->
+                voto_nulo += 1;
+            case 6 ->
+                voto_branco += 1;
+                
+            default -> 
+                JOptionPane.JOptionPane.showMessageDialog(null,"valor inválido");
+            
+        }
+    }while(num != 0);
+  }             
+    
+}
