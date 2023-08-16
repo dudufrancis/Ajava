@@ -1,0 +1,20 @@
+package revisao4;
+
+import javax.swing.JOptionPane;
+
+public class Revisao4 {
+
+    public static void main(String[] args) {
+
+        float chico = 1.50f, ze = 1.10f;
+        int cont = 0;
+        
+        while(ze < chico){
+            chico += 0.02;
+            ze += 0.03;
+            cont++;
+        }
+        JOptionPane.showMessageDialog(null, "Vai levar " + cont +" anos");
+    }
+    
+}
