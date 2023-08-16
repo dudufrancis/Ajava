@@ -1,0 +1,52 @@
+package prova2.pkg2;
+
+import javax.swing.JOptionPane;
+
+public class Prova22 {
+
+    public static void main(String[] args) {
+
+        int turma = 0, continuar;
+
+        do {
+            int x = 0;
+            float somaNota = 0, nota;
+            String relatorio = "";
+            String status;
+
+            turma = Integer.parseInt(JOptionPane.showInputDialog("Informe quantos alunos tem na turma? "));
+            String[] nomes = new String[turma];
+            float[] media = new float[turma];
+
+            for (int i = 0; i < turma; i++) {
+
+                nomes[i] = JOptionPane.showInputDialog("Informe o nome do aluno " + (1 + i) + ": ");
+                for (int j = 0; j < 3; j++) {
+                    nota = Float.parseFloat(JOptionPane.showInputDialog("Informe a nota " + (j + 1) + ": "));
+                    somaNota += nota;
+                }
+                media[i] = somaNota / 3;
+                somaNota = 0;
+            }
+            //for para ler e montar o relatorio
+            for (int i = 0; i < turma; i++) {
+                
+                if (media[i] >= 7) {
+                    status = "Aprovado";
+                } else if (media[i] >= 6 && media[i] < 7){             
+                    status = "Em Exame";
+                }else{
+                    status = "reprovado";
+                    }
+
+                relatorio += "\nAluno: " + nomes[i] + "\nMédia: " + media[i] + "\nstatus: "+ status +"\n ";
+            }
+            //imprimir relatorio
+            JOptionPane.showMessageDialog(null, relatorio);
+            
+            //perguntar se tem nova turma
+            continuar = Integer.parseInt(JOptionPane.showInputDialog("Deseja cadastrar nova turma?\n 1 SIM \n 2 NÃO"));
+        } while (continuar == 1);
+    }
+
+}
