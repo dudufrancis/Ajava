@@ -1,0 +1,17 @@
+package n;
+
+import javax.swing.JOptionPane;
+
+public class N {
+
+    public static void main(String[] args) {
+
+        int x, y;
+        
+        x = Integer.parseInt(JOptionPane.showInputDialog("Informe o valor de x: "));
+        y = Integer.parseInt(JOptionPane.showInputDialog("Informe o valor de y: "));
+        
+        JOptionPane.showMessageDialog(null, "O número maior é: " + Math.max(x, y));
+    }
+    
+}
