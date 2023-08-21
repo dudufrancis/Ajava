@@ -1,0 +1,16 @@
+package n;
+
+import javax.swing.JOptionPane;
+
+public class N {
+
+    public static void main(String[] args) {
+
+        double x;
+        
+        x = Double.parseDouble(JOptionPane.showInputDialog("Informe o valor de x: "));
+        
+        JOptionPane.showMessageDialog(null, "A raiz quadrada de x: " + Math.sqrt(x));
+    }
+    
+}
