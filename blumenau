@@ -1,0 +1,14 @@
+package javaapplication6;
+
+import java.awt.Color;
+
+public class NewClass {
+    
+    public static void main(String[] args) {
+       
+        String nome = "Blumenau";
+        
+        String parteNome = nome.substring(nome.length()-8);
+        System.out.println("Parte 0: " +parteNome);
+    }
+}
