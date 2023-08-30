@@ -1,0 +1,27 @@
+package NewClass;
+
+import javax.swing.JOptionPane;
+
+public class NewClass3 {
+   
+    public static void main(String[] args) {
+       
+        String frase = JOptionPane.showInputDialog("Informe uma frase: ");
+        
+        JOptionPane.showMessageDialog(null, "Trocando caracteres da palavra: \n" + frase + " " + "o 'a' por 'u'\n" +frase.replace("a", "u"));
+        
+        
+        JOptionPane.showMessageDialog(null, "Tirando os espaços vazios da palavra: " + "\n" +frase+ " \n " +frase.replace(" ", ""));
+        
+        
+        String[] cores = {"azul", "amarelo", "laranja"};
+        
+        for (int i = 0; i < 3; i++) {
+            
+            JOptionPane.showMessageDialog(null, "Trocando caracteres 'a' por 'u' da palavra no vetor: " + "\n" +cores[i]+ " \n" +cores[i].replace("a", "u"));
+        }
+        
+        int qtd = frase.length();
+        JOptionPane.showMessageDialog(null, "Quantidade de espaços da frase "+ qtd);
+    }
+}
