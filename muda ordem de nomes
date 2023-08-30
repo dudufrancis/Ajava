@@ -1,0 +1,18 @@
+package NewClass;
+
+import java.util.Arrays;
+import javax.swing.JOptionPane;
+
+public class NewClass4 {
+
+    public static void main(String[] args) {
+       
+        String[] nome = {"João Gustavo", "Bruno Vinicius", "Rafael Alcantara", "Jonathan Calleri", "Rogerio Ceni"};
+        
+        JOptionPane.showMessageDialog(null, "Vetor de nomes \n" +Arrays.toString(nome));
+        
+        Arrays.sort(nome);
+        JOptionPane.showMessageDialog(null, "Vetor de nomes \n" +Arrays.toString(nome));
+    }
+    
+}
