@@ -1,0 +1,39 @@
+package NewClass;
+
+import javax.swing.JOptionPane;
+
+public class exer1 {
+
+    /*Escreva um programa que deverá ter as seguintes opções: Carregar Vetor - Pedir quantas posições o usuário deseja cadastrar e alimentar o vetor
+Listar Vetor - mostrar o conteúdo do vetor
+Exibir apenas os números pares do vetor
+Exibir apenas os números ímpares do vetor
+Exibir a quantidade de números pares existem nas posições ímpares do vetor
+Exibir a quantidade de números ímpares existem nas posições pares do vetor Sair
+Deverá ser implementado um método para realizar cada uma das opções de 1 a 5.
+*/
+    public static void main(String[] args) {
+        int numeros = Integer.parseInt(JOptionPane.showInputDialog("Quantos numeros deseja cadastrar: "));
+        
+        int contpar = 0;
+        int contimpar = 0;
+        
+         int[] num = new int[numeros];
+        for (int i = 0; i < numeros; i++) {
+            num[i] = Integer.parseInt(JOptionPane.showInputDialog("Informe os numeros: " +(i + 1)));
+                
+        }
+        for (int i = 0; i < num[i]; i++) {
+            if(num[i] % 2 == 0){
+                contpar++;
+                System.out.println("\nNúmeros pares\t " + num[i] + "\nQuantidade de números pares " + contpar);
+                
+            } else {
+                contimpar++;
+                System.out.println("\nNúmero ímpares\t " + num[i] + "\nQuantidade de números ímpares " + contimpar);
+            }
+        }
+        
+    }
+    
+}
