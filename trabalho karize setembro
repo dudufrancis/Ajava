@@ -1,0 +1,33 @@
+package trabalho;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class Trabalho {
+
+    public static void main(String[] args) {
+
+        int escolha[] = null;
+        int tamanhoPequeno = 10;
+        int tamanhoMedio = 20;
+        int tamanhoGrande = 35;
+        int outroPote;
+
+        do {
+            JOptionPane.showInputDialog("Escolha o tamanho:"
+                    + "\n 1- Pequeno = R$ 10,00"
+                    + "\n 2- Médio = R$ 20,00"
+                    + "\n 3- Grande = R$ 35,00");
+
+            JOptionPane.showInputDialog("Escolha o sabor:" 
+                    + "\n 1- Morango" 
+                    + "\n 2- Uva"
+                    + "\n 3- Chocolate" 
+                    + "\n 4- Café" 
+                    + "\n 5- Flocos");
+            
+             outroPote = Integer.parseInt(JOptionPane.showInputDialog("Deseja pedir mais um pote de sorvete: (1-Sim/2-Não)".toUpperCase()));
+            
+        }while(! outroPote.equals("1"));
+    }
+}
